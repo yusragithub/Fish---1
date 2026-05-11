@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbbioccoBakes — Slow Baked, Soul Fed</title>
+    <meta name="description"
+        content="Handcrafted custom cakes, cakesicles, brownies and more by Muneeba — Karachi's home bakery. Order 3 days in advance. Delivery & pickup available." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===================== NAV ===================== -->
+    <nav aria-label="Main navigation">
+        <a href="#" class="nav-logo" aria-label="AbbioccoBakes home">AbbioccoBakes</a>
+        <ul class="nav-links">
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Our Bakes</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#order" class="btn btn-primary">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-label="Hero">
+        <div class="hero-left">
+            <span class="eyebrow">✦ Karachi Home Bakery · By Muneeba</span>
+            <h1>Slow Baked,<br><em>Soul Fed.</em></h1>
+            <p class="hero-desc">
+                Handcrafted custom cakes, rich brownies, silky tres leches and showstopping
+                cakesicles — made to order from our Karachi kitchen with patience and love.
+            </p>
+            <div class="btn-group">
+                <a href="#order" class="btn btn-primary">Place an Order</a>
+                <a href="#menu" class="btn btn-outline">See Our Bakes</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num" data-count="54" data-suffix="+">54+</div>
+                    <div class="stat-label">Creations made</div>
+                </div>
+                <div>
+                    <div class="stat-num">3 Days</div>
+                    <div class="stat-label">Advance notice needed</div>
+                </div>
+                <div>
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Made to order</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+            <div class="hero-mosaic">
+                <!-- Cell 1: tall left (graduation cake) -->
+                <div class="mosaic-cell" style="background:#EDD9C0;">
+                    <svg class="mosaic-placeholder" viewBox="0 0 120 160" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="90" width="80" height="55" rx="4" fill="#6B1A2A" opacity="0.35" />
+                        <rect x="28" y="64" width="64" height="32" rx="4" fill="#6B1A2A" opacity="0.25" />
+                        <rect x="38" y="42" width="44" height="28" rx="4" fill="#6B1A2A" opacity="0.2" />
+                        <rect x="30" y="28" width="60" height="18" rx="2" fill="#B8924A" opacity="0.3" />
+                        <circle cx="42" cy="26" r="4" fill="#B8924A" opacity="0.55" />
+                        <circle cx="60" cy="22" r="4" fill="#B8924A" opacity="0.55" />
+                        <circle cx="78" cy="26" r="4" fill="#B8924A" opacity="0.55" />
+                        <line x1="42" y1="26" x2="42" y2="14" stroke="#6B1A2A" stroke-width="1.5" opacity="0.4" />
+                        <line x1="60" y1="22" x2="60" y2="10" stroke="#6B1A2A" stroke-width="1.5" opacity="0.4" />
+                        <line x1="78" y1="26" x2="78" y2="16" stroke="#6B1A2A" stroke-width="1.5" opacity="0.4" />
+                    </svg>
+                </div>
+                <!-- Cell 2: top right (logo / bento cake) -->
+                <div class="mosaic-cell" style="background:#E5C9B0;">
+                    <svg class="mosaic-placeholder" viewBox="0 0 100 100" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="36" stroke="#6B1A2A" stroke-width="1.5" opacity="0.25"
+                            fill="rgba(107,26,42,0.07)" />
+                        <circle cx="50" cy="50" r="24" fill="rgba(107,26,42,0.1)" />
+                        <text x="50" y="56" text-anchor="middle" font-family="Georgia,serif" font-size="18"
+                            fill="#6B1A2A" opacity="0.35">AB</text>
+                    </svg>
+                </div>
+                <!-- Cell 3: bottom right (cakesicles) -->
+                <div class="mosaic-cell" style="background:#D8B898;">
+                    <svg class="mosaic-placeholder" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="18" y="12" width="22" height="38" rx="8" fill="#6B1A2A" opacity="0.25" />
+                        <rect x="18" y="50" width="22" height="12" rx="2" fill="#B8924A" opacity="0.3" />
+                        <rect x="46" y="12" width="22" height="38" rx="8" fill="#6B1A2A" opacity="0.18" />
+                        <rect x="46" y="50" width="22" height="12" rx="2" fill="#B8924A" opacity="0.3" />
+                        <circle cx="29" cy="24" r="4" fill="#fff" opacity="0.25" />
+                        <circle cx="57" cy="24" r="4" fill="#fff" opacity="0.2" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-badge">✦ Custom Orders · Delivery &amp; Pickup ✦</div>
+        </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="marquee-item">Custom Cakes</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Tres Leches</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Hot Choc Bombs</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Stuffed Cookies</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Cakesicles</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Fudge Brownies</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Banana Bread</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Bento Cakes</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Glazed Donuts</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Slow Baked · Soul Fed</span><span class="marquee-dot">·</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marquee-item">Custom Cakes</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Tres Leches</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Hot Choc Bombs</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Stuffed Cookies</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Cakesicles</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Fudge Brownies</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Banana Bread</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Bento Cakes</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Glazed Donuts</span><span class="marquee-dot">·</span>
+            <span class="marquee-item">Slow Baked · Soul Fed</span><span class="marquee-dot">·</span>
+        </div>
+    </div>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+        <div class="story-grid">
+            <div class="story-text reveal">
+                <span class="eyebrow">✦ Our Story</span>
+                <h2>Baked with<br><em>intention,</em><br>not just ingredients.</h2>
+                <p>
+                    AbbioccoBakes was born out of a simple belief — that a beautiful cake
+                    should taste every bit as good as it looks. Every creation is slow-crafted
+                    by Muneeba from her Karachi kitchen, using recipes refined over time and
+                    flavours chosen with care.
+                </p>
+                <p>
+                    No shortcuts, no compromises. From Black &amp; Gold fault-line graduation
+                    cakes to hand-painted baby shower cakesicles and walnut fudge brownies —
+                    everything is made-to-order, just for you.
+                </p>
+            </div>
+            <div class="story-visual reveal">
+                <div class="pull-quote">
+                    <blockquote>
+                        "The detailing was so neat — they matched my theme perfectly
+                        and tasted just as good as they looked."
+                    </blockquote>
+                    <cite>— Verified customer review, Instagram</cite>
+                </div>
+                <div class="quote-ring" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MENU ===================== -->
+    <section class="section section-alt" id="menu">
+        <div class="offerings-intro reveal">
+            <span class="eyebrow">✦ Our Bakes</span>
+            <h2>Something sweet<br>for <em>every occasion.</em></h2>
+        </div>
+
+        <div class="offerings-grid" data-stagger>
+            <div class="offering-card">
+                <span class="offering-icon">🎂</span>
+                <div class="offering-name">Custom Cakes</div>
+                <span class="offering-tag">Signature</span>
+                <p class="offering-desc">
+                    Fully personalised designs for any milestone. Black &amp; Gold fault-line,
+                    floral, character themes — built on chocolate fudge or vanilla buttercream
+                    with handmade fondant toppers.
+                </p>
+            </div>
+
+            <div class="offering-card">
+                <span class="offering-icon">🍮</span>
+                <div class="offering-name">Tres Leches</div>
+                <span class="offering-tag">Fan favourite</span>
+                <p class="offering-desc">
+                    A pillowy sponge soaked in three milks — rich, luscious and
+                    unforgettable. One of the most-reordered items in the menu.
+                </p>
+            </div>
+
+            <div class="offering-card">
+                <span class="offering-icon">🍫</span>
+                <div class="offering-name">Fudge Brownies</div>
+                <span class="offering-tag">New</span>
+                <p class="offering-desc">
+                    Walnut and dark chocolate chunk fudge brownies — deeply rich,
+                    dense in the best way, and dangerously good warm.
+                </p>
+            </div>
+
+            <div class="offering-card">
+                <span class="offering-icon">🍦</span>
+                <div class="offering-name">Cakesicles</div>
+                <span class="offering-tag">Party favourite</span>
+                <p class="offering-desc">
+                    Hand-painted cake on a stick with custom designs — baby shower,
+                    birthdays, gifting. A showstopper and the perfect party favour.
+                </p>
+            </div>
+
+            <div class="offering-card">
+                <span class="offering-icon">🍩</span>
+                <div class="offering-name">Glazed Donuts</div>
+                <span class="offering-tag">Melt-in-mouth</span>
+                <p class="offering-desc">
+                    Soft, melt-in-mouth glazed donuts — classic and striped styles,
+                    available as part of our corporate tasting boxes.
+                </p>
+            </div>
+
+            <div class="offering-card">
+                <span class="offering-icon">🎁</span>
+                <div class="offering-name">Corporate Boxes</div>
+                <span class="offering-tag">Gifting</span>
+                <p class="offering-desc">
+                    Curated tasting boxes for corporate events, Eid, and gifting —
+                    combining brownies, bento cakes, cakesicles and more.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section" id="how">
+        <span class="eyebrow reveal">✦ How It Works</span>
+        <h2 class="reveal">From idea to<br><em>your doorstep.</em></h2>
+
+        <div class="process-row" data-stagger>
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-title">DM on Instagram</div>
+                <p class="step-desc">
+                    Reach out via Instagram and share your vision — flavour, design
+                    inspo, and the occasion.
+                </p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-title">Confirm Your Order</div>
+                <p class="step-desc">
+                    We'll lock in the details together. Please allow at least 3 days'
+                    advance notice for all orders.
+                </p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-title">Baked Fresh for You</div>
+                <p class="step-desc">
+                    Muneeba hand-crafts your order fresh — no batch production,
+                    no compromises, ever.
+                </p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">04</div>
+                <div class="step-title">Pickup or Delivery</div>
+                <p class="step-desc">
+                    Collect from Dhoraji, Karachi — or opt for delivery straight
+                    to your door, beautifully packaged.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section section-alt">
+        <span class="eyebrow reveal">✦ Happy Customers</span>
+        <h2 class="reveal">They ordered once.<br><em>Never stopped.</em></h2>
+
+        <div class="testimonials-grid" data-stagger>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Soo neatly finished — the graduation cake was everything we hoped for."</p>
+                <span class="testi-name">— javeria.azeem, Instagram</span>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Banana bread was soooo good. Already planning my next order!"</p>
+                <span class="testi-name">— shafaqr2, Instagram</span>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"It was perfect. All of these are looking scrumptious — truly exceeded
+                    expectations."</p>
+                <span class="testi-name">— javeriazeem, Instagram</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ORDER CTA ===================== -->
+    <section class="cta-section" id="order">
+        <div class="reveal">
+            <h2>Ready to place<br>your <em>order?</em></h2>
+            <p>
+                Reach out on Instagram to get started. We'd love to create something
+                special just for you — please allow at least 3 days' notice for all orders.
+            </p>
+            <a href="https://www.instagram.com/abbioccobakes" target="_blank" rel="noopener noreferrer"
+                class="btn btn-light">
+                Message on Instagram →
+            </a>
+        </div>
+        <div class="order-details reveal">
+            <div class="detail-item">
+                <div class="detail-label">Location</div>
+                <div class="detail-value">Dhoraji, Karachi</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Order Lead Time</div>
+                <div class="detail-value">3 days in advance</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Delivery</div>
+                <div class="detail-value">Available in Karachi</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Pickup</div>
+                <div class="detail-value">Also available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <span class="footer-logo">AbbioccoBakes · By Muneeba</span>
+        <p>© 2025 AbbioccoBakes. All rights reserved.</p>
+        <a href="https://www.instagram.com/abbioccobakes" target="_blank" rel="noopener noreferrer" class="footer-ig">
+            @abbioccobakes ↗
+        </a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

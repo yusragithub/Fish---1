@@ -1,0 +1,912 @@
+/* =========================================
+   AbbioccoBakes — Main Stylesheet (TIGHT SPACING)
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap');
+
+/* -----------------------------------------
+   CSS Custom Properties
+----------------------------------------- */
+:root {
+    --cream: #FAF6F0;
+    --cream-mid: #F2EAE0;
+    --cream-dark: #E8DDD0;
+    --burgundy: #6B1A2A;
+    --burgundy-mid: #8B2A3E;
+    --burgundy-faint: #F7EDEF;
+    --gold: #B8924A;
+    --gold-light: #D4AF72;
+    --text: #1E1410;
+    --text-mid: #5A4840;
+    --text-light: #9A8880;
+    --white: #FFFFFF;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', sans-serif;
+
+    --nav-h: 72px;
+    --section-pad: 0.5rem 8vw;
+    /* REDUCED: was 4rem */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+
+    --transition: 0.25s ease;
+}
+
+/* -----------------------------------------
+   Reset & Base
+----------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* -----------------------------------------
+   Typography helpers
+----------------------------------------- */
+.eyebrow {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    /* REDUCED */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(3rem, 5.5vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    margin-bottom: 0.75rem;
+    /* REDUCED */
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h1 em,
+h2 em {
+    font-style: italic;
+    color: var(--burgundy);
+}
+
+/* -----------------------------------------
+   Buttons
+----------------------------------------- */
+.btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.2rem;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), transform var(--transition), color var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--burgundy);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--burgundy-mid);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--text-light);
+    padding: 0 0 2px;
+    border-radius: 0;
+    letter-spacing: 0.12em;
+}
+
+.btn-outline:hover {
+    color: var(--burgundy);
+    border-color: var(--burgundy);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--burgundy);
+}
+
+.btn-light:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------------
+   Navigation
+----------------------------------------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background: rgba(250, 246, 240, 0.93);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(107, 26, 42, 0.1);
+}
+
+.nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.73rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    transition: color var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--burgundy);
+}
+
+.nav-links .btn-primary {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.73rem;
+    color: var(--white) !important;
+}
+
+/* -----------------------------------------
+   Hero
+----------------------------------------- */
+.hero {
+    min-height: auto;
+    padding-top: var(--nav-h);
+    padding-bottom: 0;
+    /* ADDED - remove bottom space */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem 2rem 8vw;
+    /* REDUCED vertical padding */
+}
+
+.hero-left h1 {
+    margin-bottom: 1rem;
+    /* REDUCED */
+}
+
+.hero-desc {
+    font-size: 0.98rem;
+    color: var(--text-mid);
+    max-width: 380px;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    /* REDUCED */
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    /* REDUCED */
+    padding-top: 1.5rem;
+    /* REDUCED */
+    border-top: 1px solid rgba(107, 26, 42, 0.12);
+}
+
+.stat-num {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--burgundy);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+/* Hero Right — mosaic */
+.hero-right {
+    position: relative;
+    background: var(--cream-dark);
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.hero-mosaic {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+}
+
+.mosaic-cell {
+    overflow: hidden;
+    position: relative;
+    background: var(--cream-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mosaic-cell:first-child {
+    grid-row: span 2;
+}
+
+.mosaic-placeholder {
+    width: 55%;
+    opacity: 0.15;
+}
+
+.hero-badge {
+    position: absolute;
+    bottom: 2rem;
+    /* REDUCED */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--burgundy);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    padding: 0.7rem 1.75rem;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+/* -----------------------------------------
+   Marquee
+----------------------------------------- */
+.marquee-bar {
+    background: var(--burgundy);
+    padding: 0.5rem 0;
+    /* REDUCED */
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    margin: 0;
+    /* ADDED */
+}
+
+.marquee-track {
+    display: inline-flex;
+    animation: marquee 22s linear infinite;
+}
+
+.marquee-item {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0 2rem;
+}
+
+.marquee-dot {
+    color: var(--gold-light);
+    font-size: 1rem;
+    line-height: 1;
+    align-self: center;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* -----------------------------------------
+   Sections — shared (TIGHT SPACING)
+----------------------------------------- */
+.section {
+    padding: var(--section-pad);
+}
+
+.section-alt {
+    background: var(--cream-mid);
+    padding: var(--section-pad);
+}
+
+/* Remove extra space between sections */
+.section:first-of-type {
+    padding-top: 1.5rem;
+}
+
+/* -----------------------------------------
+   Story / About
+----------------------------------------- */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    /* REDUCED */
+    align-items: center;
+}
+
+.story-text p {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    /* REDUCED */
+}
+
+.pull-quote {
+    position: relative;
+    background: var(--white);
+    border: 1px solid rgba(107, 26, 42, 0.12);
+    padding: 2rem;
+    /* REDUCED */
+    border-radius: var(--radius-md);
+}
+
+.pull-quote::before {
+    content: '\201C';
+    font-family: var(--font-display);
+    font-size: 9rem;
+    color: var(--burgundy);
+    opacity: 0.1;
+    position: absolute;
+    top: -1.5rem;
+    left: 1.5rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.pull-quote blockquote {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    /* REDUCED */
+    position: relative;
+    z-index: 1;
+}
+
+.pull-quote cite {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-style: normal;
+}
+
+.quote-ring {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: 1.5px solid var(--burgundy);
+    opacity: 0.12;
+    border-radius: 50%;
+    bottom: -28px;
+    right: -28px;
+    pointer-events: none;
+}
+
+/* -----------------------------------------
+   Menu / Offerings
+----------------------------------------- */
+.offerings-intro {
+    max-width: 520px;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    /* REDUCED from 3rem */
+}
+
+.offering-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid rgba(107, 26, 42, 0.1);
+    padding: 1.5rem 1.5rem 1.5rem;
+    /* REDUCED */
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.offering-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--burgundy);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.offering-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(107, 26, 42, 0.09);
+    border-color: rgba(107, 26, 42, 0.18);
+}
+
+.offering-card:hover::after {
+    transform: scaleX(1);
+}
+
+.offering-icon {
+    font-size: 1.9rem;
+    display: block;
+    margin-bottom: 0.75rem;
+    /* REDUCED */
+}
+
+.offering-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+    /* REDUCED */
+}
+
+.offering-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(184, 146, 74, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.6rem;
+    /* REDUCED */
+}
+
+.offering-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.75;
+}
+
+/* -----------------------------------------
+   How It Works
+----------------------------------------- */
+.process-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 1.5rem;
+    /* REDUCED from 3.5rem */
+    position: relative;
+}
+
+.process-row::before {
+    content: '';
+    position: absolute;
+    top: 1.95rem;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: var(--burgundy);
+    opacity: 0.15;
+}
+
+.process-step {
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.step-num {
+    width: 4rem;
+    height: 4rem;
+    border: 1.5px solid var(--burgundy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    /* REDUCED */
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    color: var(--burgundy);
+    background: var(--cream);
+    position: relative;
+    z-index: 1;
+    transition: background var(--transition), color var(--transition);
+}
+
+.process-step:hover .step-num {
+    background: var(--burgundy);
+    color: var(--white);
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    /* REDUCED */
+    color: var(--text);
+}
+
+.step-desc {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.75;
+}
+
+/* -----------------------------------------
+   Testimonials
+----------------------------------------- */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    /* REDUCED from 3rem */
+}
+
+.testi-card {
+    background: var(--white);
+    border: 1px solid rgba(107, 26, 42, 0.1);
+    padding: 1.5rem;
+    /* REDUCED */
+    border-radius: var(--radius-md);
+    transition: transform var(--transition);
+}
+
+.testi-card:hover {
+    transform: translateY(-4px);
+}
+
+.testi-stars {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    /* REDUCED */
+}
+
+.testi-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    /* REDUCED */
+}
+
+.testi-name {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+/* -----------------------------------------
+   Order CTA (MAROON SECTION) — TIGHT SPACING
+----------------------------------------- */
+.cta-section {
+    background: var(--burgundy);
+    padding: 0.75rem 8vw;
+    /* REDUCED from 3.5rem */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    /* REDUCED */
+    align-items: center;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    /* ADDED */
+}
+
+.cta-section h2 em {
+    color: var(--gold-light);
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    /* REDUCED */
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 1rem;
+    /* REDUCED */
+    border-radius: var(--radius-md);
+}
+
+.detail-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 0.3rem;
+    /* REDUCED */
+}
+
+.detail-value {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+/* -----------------------------------------
+   Footer — TIGHT SPACING
+----------------------------------------- */
+footer {
+    background: #170810;
+    padding: 1rem 8vw;
+    /* REDUCED from 2.75rem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.08em;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-ig {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--gold-light);
+    transition: opacity var(--transition);
+}
+
+.footer-ig:hover {
+    opacity: 0.7;
+}
+
+/* -----------------------------------------
+   Entrance animations
+----------------------------------------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .eyebrow {
+    animation: fadeUp 0.7s 0.05s ease both;
+}
+
+.hero h1 {
+    animation: fadeUp 0.7s 0.18s ease both;
+}
+
+.hero .hero-desc {
+    animation: fadeUp 0.7s 0.30s ease both;
+}
+
+.hero .btn-group {
+    animation: fadeUp 0.7s 0.42s ease both;
+}
+
+.hero .hero-stats {
+    animation: fadeUp 0.7s 0.54s ease both;
+}
+
+/* -----------------------------------------
+   Scroll-reveal (JS adds .visible)
+----------------------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+        min-height: 50vw;
+        position: relative;
+    }
+
+    .hero-left {
+        padding: 2rem 6vw 1.5rem;
+        /* REDUCED */
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        /* REDUCED */
+    }
+
+    .offerings-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        /* REDUCED */
+    }
+
+    .process-row::before {
+        display: none;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        /* REDUCED */
+        padding: 1.5rem 6vw;
+        /* REDUCED */
+    }
+
+    .nav-links li:not(:last-child) {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --section-pad: 1.5rem 6vw;
+        /* REDUCED */
+    }
+
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-details {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 6vw;
+        /* REDUCED */
+    }
+
+    .cta-section {
+        padding: 1.5rem 6vw;
+        /* REDUCED */
+    }
+}
